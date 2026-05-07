@@ -1,11 +1,10 @@
-# atmacaioc_local.py — AtmacaIOC Yerel (v6.2-local)
+# atmacaioc_local.py — AtmacaIOC Local (v6.2-local)
 # v6.2 Değişiklikler:
-#   - Fortigate / Firewall Trafik Logu analiz tipi eklendi
-#   - OllamaWorker prompt tamamen yeniden yazıldı:
 #       • Her analiz tipi için ayrı, kısa ve net prompt
 #       • Fortigate: srcip/dstip/DNAT/srccountry semantiği
 #       • temperature 0.3→0.1 (daha deterministik)
-#   - Model önerisi: qwen2.5:14b veya mistral (llama3.2 yetersiz)
+#       • Dış ağ ile bağlantı kurmaz yerelde kurduğunuz yapay zeka(ollama) ila çalışır.
+#   - Model önerisi: qwen2.5:14b veya mistral 
 
 import sys
 import re
