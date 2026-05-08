@@ -1,21 +1,26 @@
-🦅 AtmacaIOC — Yerel SOC Analiz Platformu
+🦅 AtmacaIOC - Yerel SOC Analiz Platformu
 
-https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white
-https://img.shields.io/badge/License-MIT-green?style=flat-square
-https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=flat-square
-https://img.shields.io/badge/AI-Ollama%20Local-orange?style=flat-square
-https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square
+
+<img width="2559" height="1387" alt="1" src="https://github.com/user-attachments/assets/787ab621-e25f-4cb5-8d08-f031e411a9cc" />
+<img width="2559" height="1392" alt="2" src="https://github.com/user-attachments/assets/7f24a669-001c-4a7b-9e2e-90f4ca888064" />
+<img width="2559" height="1396" alt="3" src="https://github.com/user-attachments/assets/d25f51aa-a040-477e-a525-32246c1a29f2" />
+<img width="2553" height="1392" alt="4" src="https://github.com/user-attachments/assets/ad0603b2-b7d5-4a82-a6f3-60b3ea42558d" />
+<img width="2559" height="1394" alt="5" src="https://github.com/user-attachments/assets/cd031dd4-94d3-4bcb-83d3-3153f1ea9283" />
+<img width="2559" height="1385" alt="6" src="https://github.com/user-attachments/assets/5fad266f-8528-4bcb-b145-c2d8ef1878e4" />
+<img width="2559" height="1383" alt="7" src="https://github.com/user-attachments/assets/e80500dc-d972-493d-aefb-d1842b4d6953" />
+
+
 
 Siber güvenlik analistleri için geliştirilmiş, modern ve kapsamlı IOC analiz ve AI log analizi platformu.
 Tek dosya · Sıfır konfigürasyon · Lokalde çalışan · Dışarıya veri göndermeyen
 
-💡 Neden Yaptım?
-Bir SOC analisti olarak her gün onlarca IP, hash ve domain analiz etmek zorunda kalıyordum. Her seferinde farklı platformları — AbuseIPDB, VirusTotal, Shodan, MalwareBazaar — tek tek açıp manuel sorgulama yapmak zaman kaybettiriyordu. Üstelik hassas iç log verilerini kopyalayıp çevrimiçi araçlara yapıştırmak ciddi bir güvenlik riski oluşturuyordu.
-AtmacaIOC bu sorunu çözmek için geliştirildi:
+💡 Neden Yaptim?
+Bir SOC analisti olarak her gun onlarca IP, hash ve domain analiz etmek zorunda kaliyordum. Her seferinde farkli platformlari AbuseIPDB, VirusTotal, Shodan, MalwareBazaar tek tek acip manuel sorgulama yapmak hem zaman kaybettiriyor hem de hassas ic log verilerini kopyalayip cevrimici araclara yapistirmak ciddi bir guvenlik riski olusturuyordu.
+AtmacaIOC bu sorunu cozmek icin gelistirildi:
 
-IOC sorgularını tek ekrandan, birden fazla servise paralel göndererek saniyeler içinde sonuç alıyorum
-İç ağ loglarını, OT/ICS olaylarını ve EDR alarmlarını tamamen lokalde çalışan AI modeline (Ollama) göndererek hazır SOC bildirimine dönüştürüyorum — hiçbir veri dışarı çıkmıyor
-Günlük analist iş akışında sürekli ihtiyaç duyduğum referans bilgileri (port listesi, MITRE ATT&CK teknikleri, Windows Event ID'leri, IR adımları, SOC komutları) tek uygulamada hızlıca erişilebilir hale getirdim
+IOC sorgularini tek ekrandan birden fazla servise paralel gondererek saniyeler icinde sonuc aliyorum
+Ic ag loglarini, OT/ICS olaylarini ve EDR alarmlarini tamamen lokalde calisan AI modeline (Ollama) gondererek hazir SOC bildirimine donusturuyorum, hicbir veri disari cikmiyor
+Gunluk analist is akisinda surekli ihtiyac duyugum referans bilgileri tek uygulamada hizlica erisebilir hale getirdim
 
 ✨ Özellikler
 🔍 IOC Analizi — 9 Farklı Servis, Tek Ekran
@@ -92,58 +97,3 @@ API anahtarları hiçbir zaman kod içine, .env dosyasına veya harici bir sunuc
 PlatformDepolama YeriWindowsWindows Credential ManagermacOSKeychainLinuxSecret Service (GNOME Keyring / KWallet)
 keyring kütüphanesi aracılığıyla sağlanan bu yöntem sayesinde anahtarlar yalnızca sizin kullanıcı oturumunuzda okunabilir. Başka kullanıcı veya süreçler anahtarlarınıza erişemez.
 
-Uygulamayı ilk açtığınızda ⚙️ API Anahtarları butonuna tıklayın, anahtarlarınızı girin ve kaydedin. Bir daha girmeniz gerekmez.
-
-
-🏗️ Uygulama Mimarisi
-AtmacaIOC
-│
-├── IOC Motoru
-│   ├── IOC Tespit — regex (IPv4, MD5, SHA1, SHA256, Domain)
-│   ├── AnalysisWorker (QThread) — her servis ayrı thread'de çalışır
-│   └── 9 Provider: AbuseIPDB · ARIN · Shodan · GreyNoise · OTX
-│                   VirusTotal · MalwareBazaar · HybridAnalysis · URLScan
-│
-├── AI Log Analizi
-│   ├── OllamaWorker (QThread) — bloklamayan asenkron çalışma
-│   ├── Prompt Motoru — 7 log tipi için özelleştirilmiş prompt
-│   │   ├── Fortigate / Firewall Trafik
-│   │   ├── OT/ICS/SCADA
-│   │   ├── EDR (CrowdStrike / Defender / SentinelOne)
-│   │   ├── Windows Event / AccelOps / SIEM
-│   │   ├── Firewall Policy Change
-│   │   └── Genel (fallback)
-│   └── Markdown → HTML renderer
-│       ├── SOC BİLDİRİMİ  →  özel mavi kart
-│       ├── Tablo           →  styled HTML table
-│       ├── Tehdit seviyesi →  renkli badge
-│       └── Code block      →  syntax highlighted pre
-│
-├── SOC Referans Kütüphanesi
-│   ├── 10 alt sekme (Portlar, Event ID, Komutlar, MITRE, IR ...)
-│   ├── Canlı arama filtresi
-│   └── Tek tıkla kopyala
-│
-└── UI Katmanı (PyQt6)
-    ├── QMainWindow + QTabWidget — 3 ana sekme
-    ├── QThread tabanlı asenkron işlem — UI donmaz
-    ├── QTextBrowser — SVG base64 gauge grafik render
-    └── keyring — OS native credential storage
-KatmanTeknolojiUI FrameworkPyQt6HTTP İsteklerirequestsCredential StoragekeyringAI EntegrasyonuOllama REST API /api/chatGrafik RenderSVG inline (base64, QTextBrowser)Çalışma ModuTek dosya, tam yerel
-
-🚀 Kurulum
-1. Bağımlılıkları yükle
-bashpip install PyQt6 requests keyring
-2. Uygulamayı çalıştır
-bashpython atmacaioc_local.py
-3. AI Log Analizi için Ollama kurulumu (opsiyonel)
-bash# Ollama'yı kur: https://ollama.com
-
-# Model indir — birini seç
-ollama pull qwen2.5:14b    # Önerilen (8GB VRAM)
-ollama pull mistral         # Hızlı alternatif (4GB VRAM)
-ollama pull llama3.1:8b    # Düşük kaynak alternatif
-Kurulumdan sonra uygulamada Yerel AI Log sekmesine geç, model adını yaz ve analiz et.
-
-📦 Bağımlılıklar
-PaketKullanımZorunlu muPyQt6ArayüzEvetrequestsAPI istekleriEvetkeyringGüvenli anahtar saklamaEvet
