@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
 > Siber guvenlik analistleri icin gelistirilmis, modern ve kapsamli IOC analiz ve AI log analizi platformu.  
-> Tek dosya - Sifir konfigurasyon - Lokalde calisan - Disariya veri gondermeyen
+> Tek dosya - Sifir konfigurasyon - Lokalde calisan - Disariya veri gondermeyen,iş akışını kolaylaştırmak için yapıldı.
 
 ---
 
@@ -252,11 +252,6 @@ Kurulumdan sonra uygulamada **Yerel AI Log** sekmesine gec, model adini yaz ve a
 
 ---
 
-## Yasal Uyari
-
-Bu arac yalnizca **yetkili sistemlerin guvenlik analizi** amaciyla kullanilmak uzere gelistirilmistir. Baskalarina ait sistemlerde izinsiz kullanim yasal sonuclar dogurabilir. Sorumluluk kullaniciya aittir.
-
----
 
 ## Lisans
 
