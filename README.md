@@ -9,6 +9,15 @@
 > Siber guvenlik analistleri icin gelistirilmis, modern ve kapsamli IOC analiz ve AI log analizi platformu.  
 > Tek dosya - Sifir konfigurasyon - Lokalde calisan - Disariya veri gondermeyen,iş akışını kolaylaştırmak için yapıldı.
 
+<img width="2559" height="1387" alt="1" src="https://github.com/user-attachments/assets/c7e073d3-9306-49dd-9b81-1c6e01b64136" />
+<img width="2559" height="1392" alt="2" src="https://github.com/user-attachments/assets/24c723dd-07e2-45dc-8db9-858f1e96cb59" />
+<img width="2559" height="1396" alt="3" src="https://github.com/user-attachments/assets/738e72b1-0f91-4b48-8c89-b1ae2cec645c" />
+<img width="2553" height="1392" alt="4" src="https://github.com/user-attachments/assets/48cf13f1-f30f-4463-9c8f-52cc583a1f19" />
+<img width="2559" height="1394" alt="5" src="https://github.com/user-attachments/assets/391370fb-8b42-49df-bc16-ffeef7a3338b" />
+<img width="2559" height="1385" alt="6" src="https://github.com/user-attachments/assets/bb5bcf27-c7e4-4fbf-829c-26f338d0f9f3" />
+<img width="2559" height="1383" alt="7" src="https://github.com/user-attachments/assets/d41e4f91-294b-4670-b44a-5e7f16141eb6" />
+
+
 ---
 
 ## Neden Yaptim?
