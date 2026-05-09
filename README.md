@@ -264,5 +264,5 @@ MIT License - Ozgurce kullanin, dagitin, degistirin.
 
 ---
 
-*AtmacaIOC - Bir SOC analisti tarafindan, SOC analistleri icin.*  
+*AtmacaIOC - Ali Ardal tarafindan, SOC analistleri icin geliştirildi.*  
 *Katkilariniz icin Pull Request ve Issue acabilirsiniz.*
