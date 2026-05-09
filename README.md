@@ -262,11 +262,5 @@ Kurulumdan sonra uygulamada **Yerel AI Log** sekmesine gec, model adini yaz ve a
 ---
 
 
-## Lisans
-
-MIT License - Ozgurce kullanin, dagitin, degistirin.
-
----
-
 *AtmacaIOC - Ali Ardal tarafindan, SOC analistleri icin geliştirildi.*  
 *Katkilariniz icin Pull Request ve Issue acabilirsiniz.*
