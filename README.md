@@ -1,3 +1,4 @@
+
 # 🛡 CyberLogParser Pro 2026
 
 **Siber güvenlik analistleri için geliştirilmiş, modern ve kapsamlı log analiz aracı.**  
@@ -158,3 +159,5 @@ MIT — istediğin gibi kullan, değiştir, dağıt.
 ---
 
 *SOC analistleri için, SOC analistleri tarafından yapıldı.*
+
+
